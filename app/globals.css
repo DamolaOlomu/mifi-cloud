@@ -1,0 +1,18 @@
+:root{--bg:#f1f3f2;--ink:#12201c;--mute:#5c6b66;--line:#d5dbd8;--card:#fff;--bar:#12201c;--hi:#ffcb05;--bad:#b3261e}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1715;--ink:#eef3f0;--mute:#93a39d;--line:#27332f;--card:#16211e;--bar:#eef3f0}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Avenir Next","Segoe UI",system-ui,sans-serif;padding:env(safe-area-inset-top) 16px calc(32px + env(safe-area-inset-bottom))}
+main{max-width:640px;margin:0 auto}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0 8px;font-size:14px;color:var(--mute)}
+h1{font-size:15px;font-weight:600;margin:0;color:var(--ink)}h2{font-size:15px;margin:28px 0 10px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--bad);margin-right:8px}.dot.ok{background:#2e9e5b}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px;margin-top:8px}
+.big{font-size:clamp(40px,12vw,64px);font-weight:700;letter-spacing:-.03em;line-height:1.05}.big small{font-size:.4em;font-weight:500;color:var(--mute);letter-spacing:0}
+.gauge{height:18px;border-radius:9px;background:var(--line);margin:16px 0 8px;overflow:hidden}.gauge i{display:block;height:100%;background:var(--hi);border-right:3px solid var(--bar);transition:width .6s}
+.row{display:flex;gap:12px;margin-top:14px}.row>div{flex:1;border-top:2px solid var(--ink);padding-top:8px}.row b{display:block;font-size:22px}
+.row span,.note{font-size:13px;color:var(--mute)}
+.chart{display:flex;align-items:flex-end;gap:5px;height:120px;border-bottom:1px solid var(--line)}.chart div{flex:1;background:var(--bar);border-radius:3px 3px 0 0;min-height:2px}.chart div.t{background:var(--hi);outline:2px solid var(--bar)}
+.lbl{display:flex;gap:5px;font-size:11px;color:var(--mute)}.lbl span{flex:1;text-align:center}
+form{display:flex;gap:10px;flex-wrap:wrap;align-items:end}label{font-size:13px;color:var(--mute);display:block}
+input{width:130px;font:inherit;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink)}
+button{font:inherit;font-weight:600;padding:10px 16px;border:0;border-radius:8px;background:var(--ink);color:var(--bg);cursor:pointer}
+:focus-visible{outline:3px solid var(--hi);outline-offset:2px}
